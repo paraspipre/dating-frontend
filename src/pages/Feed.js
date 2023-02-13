@@ -21,7 +21,7 @@ const Feed = () => {
    
 
    useEffect(() => {
-      if(JSON.parse(localStorage.getItem("user")){
+      if(localStorage.getItem("user")){
          setloggeduserID(JSON.parse(localStorage.getItem("user"))._id)
       }
    }, [loggeduserID])
