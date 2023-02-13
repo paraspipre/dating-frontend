@@ -21,7 +21,7 @@ const Feed = () => {
    const socket = useRef();
    useEffect(() => {
       if (loggeduser) {
-         socket.current = io("http://localhost:8000/")
+         socket.current = io("https://dating-server-production.up.railway.app/")
          socket.current.emit("newUser", loggeduser.email)
       }
    }, [loggeduser])
