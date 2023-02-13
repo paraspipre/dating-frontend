@@ -7,15 +7,23 @@ import { getAllRoute, userRoute } from "../utils/APIRoutes";
 import { io } from "socket.io-client"
 
 const Feed = () => {
+   const navigate = useNavigate()
+   
+   useEffect(() => {
+      !isAuth() && navigate('/login')
+   }, [])
+   
    const [users, setUsers] = useState(null)
    const [loggeduser, setloggeduser] = useState(null)
    const [loggeduserID, setloggeduserID] = useState("")
    const [shouldFetch, setShouldFetch] = useState(true)
 
-   const navigate = useNavigate()
+   
 
    useEffect(() => {
-      setloggeduserID(JSON.parse(localStorage.getItem("user"))._id)
+      if(JSON.parse(localStorage.getItem("user")){
+         setloggeduserID(JSON.parse(localStorage.getItem("user"))._id)
+      }
    }, [loggeduserID])
 
    const socket = useRef();
@@ -26,9 +34,7 @@ const Feed = () => {
       }
    }, [loggeduser])
 
-   useEffect(() => {
-      !isAuth() && navigate('/login')
-   }, [])
+   
 
    useEffect(() => {
       if (loggeduserID && shouldFetch) {
