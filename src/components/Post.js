@@ -68,7 +68,7 @@ const Post = ({ loggeduser, user, socket, handleRefreshData }) => {
         to: user.email,
         from: loggeduser.email,
         message: `${loggeduser.name} superliked your image!`,
-        image: `https://dating-server-production.up.railway.app/api/auth/image/${user.name}`
+        image: `https://dating-tjgx.onrender.com/api/auth/image/${user.name}`
       });
     }).catch(err => {
       console.log(err)
