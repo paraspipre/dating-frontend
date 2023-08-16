@@ -29,7 +29,7 @@ const Feed = () => {
    const socket = useRef();
    useEffect(() => {
       if (loggeduser) {
-         socket.current = io("https://dating-server-production.up.railway.app/")
+         socket.current = io("https://dating-tjgx.onrender.com/")
          socket.current.emit("newUser", loggeduser.email)
       }
    }, [loggeduser])
