@@ -99,7 +99,7 @@ const Post = ({ loggeduser, user, socket, handleRefreshData }) => {
         <div className="flex items-center">
           <img
             className="w-12 h-12 rounded-full mr-4"
-            src={`https://dating-server-production.up.railway.app/api/auth/image/${user.name}`}
+            src={`https://dating-tjgx.onrender.com/api/auth/image/${user.name}`}
             alt="User Profile"
           />
           <div className="flex-1">
@@ -109,7 +109,7 @@ const Post = ({ loggeduser, user, socket, handleRefreshData }) => {
 
         <img
           className="mt-4 w-full rounded-lg"
-          src={`https://dating-server-production.up.railway.app/api/auth/image/${user.name}`}
+          src={`https://dating-tjgx.onrender.com/api/auth/image/${user.name}`}
           alt="Post Image"
         />
         <div className="mt-6">
